@@ -73,10 +73,10 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  if ((e.which !== LEFT_ARROW) && (e.which !== RIGHT_ARROW))
+  if([LEFT_ARROW, RIGHT_ARROW].indexOf(e.which) > -1){
    e.preventDefault();
    e.stopPropagation();
-
+ }
    if (e.which === LEFT_ARROW) {
      moveDodgerLeft()
 
